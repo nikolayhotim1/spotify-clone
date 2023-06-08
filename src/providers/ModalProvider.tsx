@@ -1,10 +1,8 @@
 'use client'
 
 import { AuthModal } from '@/components/AuthModal'
+import { UploadModal } from '@/components/UploadModal'
 import { useEffect, useState } from 'react'
-// import SubscribeModal from '@/components/SubscribeModal'
-// import UploadModal from '@/components/UploadModal'
-// import { ProductWithPrice } from '../../types'
 
 // interface ModalProviderProps {
 // 	products: ProductWithPrice[]
@@ -21,8 +19,8 @@ export function ModalProvider(/*{ products }: ModalProviderProps*/) {
 	return (
 		<>
 			<AuthModal />
-			{/* <SubscribeModal products={products} />
-			<UploadModal /> */}
+			{/* <SubscribeModal products={products} /> */}
+			<UploadModal />
 		</>
 	)
 }
