@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useLoadImage } from '@/hooks/useLoadImage'
-// import usePlayer from '@/hooks/usePlayer'
+import { usePlayer } from '@/hooks/usePlayer'
 import { Song } from '../../types'
 
 interface MediaItemProps {
@@ -11,14 +11,14 @@ interface MediaItemProps {
 }
 
 export function MediaItem({ data, onClick }: MediaItemProps) {
-	// const player = usePlayer()
+	const player = usePlayer()
 	const imageUrl = useLoadImage(data)
 
 	function handleClick() {
 		if (onClick) {
 			return onClick(data.id)
 		}
-		// return player.setId(data.id)
+		return player.setId(data.id)
 	}
 
 	return (
